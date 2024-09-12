@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인터랙티브 아티클</title>
+    <!-- Google Fonts 추가 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700;800&family=Song+Myung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="left-text do-hyeon-regular">동아일보</div>
+    <div class="center-text do-hyeon-regular">이제 정말, <span class="red-bold">설탕</span>과 헤어질 결심</div>
+    <div class="right-text do-hyeon-regular">인사이트워크숍③</div>
+</div>
+
+<div class="image-container">
+    <img src="1.jpeg" alt="인트로 첫번째" class="active" id="intro1">
+    <img src="2.jpeg" alt="인트로 두번째" id="intro2">
+    <img src="image1.jpg" alt="첫 번째 이미지" id="image1">
+    <img src="image2.jfif" alt="두 번째 이미지" id="image2">
+    <img src="image3.webp" alt="세 번째 이미지" id="image3">
+</div>
+
+<div class="quiz-container" id="quiz-container">
+    <h2>오늘 동윤이가 하루 동안 먹은 식사에서 설탕의 양은 몇 그람일까요?</h2>
+    <input type="text" id="answer" placeholder="답을 입력하세요">
+    <button onclick="showResult()">제출</button>
+</div>
+
+<!-- 추가된 이미지 컨테이너 -->
+<div class="image-container2" style="display: none;">
+    <img src="4.jpeg" alt="네번째" id="image4">
+    <img src="5.jpeg" alt="다섯번째" id="image5">
+    <img src="6.jpeg" alt="여섯번째" id="image6">
+    <img src="7.jpeg" alt="일곱번째" id="image7">
+    <img src="8.jpeg" alt="여덟번째" id="image8">
+    <img src="9.jpeg" alt="아홉번째" id="image9">
+    <img src="10.jpeg" alt="열번째" id="image10">
+    <img src="11.jpeg" alt="열한번째" id="image11">
+    <img src="12.jpeg" alt="열두번째" id="image12">
+</div>
+
+<!-- 설탕중독 자가진단 테스트 소개 페이지 -->
+<div class="intro-container" id="intro-container">
+    <h2>당신은 얼마나 설탕에 중독되어있나요?</h2>
+    <p>자가진단 테스트를 통해 당신의 설탕 중독 정도를 확인해보세요.</p>
+    <button class="intro-button" onclick="startTest()">테스트 시작하기</button>
+</div>
+
+<!-- 설탕중독 자가진단 테스트 페이지 -->
+<div class="test-container" id="test-container">
+    <h2>설탕중독 자가진단 테스트</h2>
+    <div class="test-question">
+        <p id="question"></p>
+        <div class="test-buttons">
+            <button onclick="answerQuestion(true)">그렇다</button>
+            <button onclick="answerQuestion(false)">아니다</button>
+        </div>
+    </div>
+</div>
+
+<!-- 결과 페이지 -->
+<div class="final-result" id="final-result">
+    <p id="final-message"></p>
+</div>
+
+<script>
+    const images = document.querySelectorAll('.image-container img');
+    const images2 = document.querySelectorAll('.image-container2 img'); // 새로운 이미지 그룹 선택
+    let currentIndex = 0;
+
+    // 이미지 클릭 이벤트 추가
+    images[currentIndex].addEventListener('click', showNextImage);
+
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex++;
+
+        if (currentIndex < images.length) {
+            images[currentIndex].classList.add('active');
+            images[currentIndex].addEventListener('click', showNextImage);
+        } else {
+            document.querySelector('.image-container').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'block';
+        }
+    }
+
+    function showResult() {
+        document.getElementById('quiz-container').style.display = 'none';
+        document.querySelector('.image-container2').style.display = 'flex'; // 새로운 이미지 컨테이너 보여주기
+        images2[0].classList.add('active'); // 첫 번째 이미지 활성화
+        images2[0].addEventListener('click', showNextImage2); // 이미지 클릭 이벤트 추가
+    }
+
+    let currentIndex2 = 0;
+
+    function showNextImage2() {
+        images2[currentIndex2].classList.remove('active');
+        currentIndex2++;
+
+        if (currentIndex2 < images2.length) {
+            images2[currentIndex2].classList.add('active');
+            images2[currentIndex2].addEventListener('click', showNextImage2);
+        } else {
+            document.querySelector('.image-container2').style.display = 'none'; // 모든 이미지 클릭 후 자가진단 테스트 소개 페이지로 이동
+            showIntro();
+        }
+    }
+
+    function showIntro() {
+        document.getElementById('intro-container').style.display = 'block';
+    }
+
+    // 설탕중독 자가진단 테스트 기능
+    const questions = [
+        "일과 중에 한번이라도 아무 의욕없이 축 늘어질 때가 있습니까?",
+        "사무실의 서랍이나 집안 내에 당분이 많은 과자를 상비해두는 편입니까?",
+        "종종 이유 없이 불안하고 공격적이 됩니까?",
+        "물 대신 청량음료를 마시고 싶은 경우가 많습니까?",
+        "아이스크림이나 초콜릿을 먹고 있는 사람이 부러울 때가 있습니까?"
+    ];
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function startTest() {
+        document.getElementById('intro-container').style.display = 'none';
+        document.getElementById('test-container').style.display = 'block';
+        showQuestion();
+    }
+
+    function showQuestion() {
+        document.getElementById('question').innerText = questions[currentQuestionIndex];
+    }
+
+    function answerQuestion(answer) {
+        if (answer) score++; // "그렇다"에 대한 점수 추가
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            showQuestion();
+        } else {
+            showFinalResult();
+        }
+    }
+
+    function showFinalResult() {
+        document.getElementById('test-container').style.display = 'none';
+        document.getElementById('final-result').style.display = 'block';
+        document.getElementById('final-message').innerHTML = `
+            체크한 항목 수: <span class="emphasis-blue">${score}</span>개<br>
+            당신은 <span class="emphasis-red">설탕 중독 위험군</span>입니다.
+        `;
+    }
+</script>
+
+</body>
+</html>
