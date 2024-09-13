@@ -152,3 +152,340 @@ img.active {
     background-color: #215679;
     color: #fff;
 }
+
+/* 애니메이션 효과 */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.slide-in {
+    animation: slideIn 0.7s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* CSS 애니메이션 추가 */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* 애니메이션 효과 추가 및 수정 */
+.fade-in {
+    animation: fadeIn 2s ease forwards; /* 첫 번째 이미지를 천천히 페이드 인 */
+}
+
+.fade-in-slow {
+    animation: fadeInSlow 3s ease forwards; /* 두 번째 이미지로 자연스럽게 넘어가기 위한 페이드 인 */
+}
+
+.slide-up {
+    animation: slideUp 2s ease forwards; /* 아래에서 위로 올라오면서 사라지는 애니메이션 */
+}
+
+/* 페이드 인 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 느린 페이드 인 애니메이션 */
+@keyframes fadeInSlow {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 아래에서 위로 올라오는 애니메이션 */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+
+/* CSS 애니메이션 수정 */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-in-slow {
+    animation: fadeInSlow 3s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 4s ease forwards; /* 애니메이션 지속 시간을 4초로 설정하여 천천히 사라지도록 수정 */
+}
+
+/* 페이드 인 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 느린 페이드 인 애니메이션 */
+@keyframes fadeInSlow {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 아래에서 위로 올라오는 애니메이션 */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+/* 버튼 기본 스타일 */
+.test-buttons button, .intro-button, #quiz-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #00548c;
+    color: #fff;
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* 트랜지션 효과 추가 */
+}
+
+/* 버튼이 눌렸을 때 효과 */
+.test-buttons button:active, .intro-button:active, #quiz-container button:active {
+    transform: scale(0.95); /* 버튼이 살짝 들어가는 효과 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 살짝 눌린 듯한 그림자 효과 */
+}
+
+/* 버튼 기본 스타일 */
+.test-buttons button, .intro-button, #quiz-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #00548c;
+    color: #fff;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease, color 0.1s ease; /* 트랜지션 효과 추가 */
+}
+
+/* 버튼이 눌렸을 때 효과 */
+.test-buttons button:active, .intro-button:active, #quiz-container button:active {
+    transform: scale(0.95); /* 버튼이 살짝 들어가는 효과 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 살짝 눌린 듯한 그림자 효과 */
+    background-color: #003d66; /* 버튼이 눌렸을 때 배경색 변경 */
+    color: #e0e0e0; /* 버튼이 눌렸을 때 글자 색 변경 */
+}
+
+/* 버튼 기본 스타일 */
+.test-buttons button, .intro-button, #quiz-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #00548c; /* 기본 배경색 */
+    color: #fff; /* 기본 글자 색 */
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease, color 0.1s ease; /* 트랜지션 효과 추가 */
+}
+
+/* 버튼이 눌렸을 때 효과 */
+.test-buttons button:active, .intro-button:active, #quiz-container button:active {
+    transform: scale(0.95); /* 버튼이 살짝 들어가는 효과 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 살짝 눌린 듯한 그림자 효과 */
+    background-color: #ff4500; /* 극적인 변화를 위해 밝은 빨간색으로 변경 */
+    color: #ffffff; /* 눌렸을 때 글자 색을 순수한 흰색으로 변경 */
+}
+
+/* 이미지가 아래에서 위로 슬라이드되면서 나타나는 애니메이션 */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+/* 새로운 이미지가 올라오는 애니메이션 */
+@keyframes slideUpIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-container2 img {
+    display: none; /* 처음엔 모든 이미지를 숨김 */
+    position: relative;
+    animation-duration: 4s; /* 애니메이션 지속 시간 조절 */
+    animation-fill-mode: forwards;
+}
+
+/* 새로 나타나는 이미지의 스타일 */
+img.slide-up-in {
+    display: block;
+    animation-name: slideUpIn;
+}
+
+/* 사라지는 이미지의 스타일 */
+img.slide-up-out {
+    display: block;
+    animation-name: slideUp;
+}
+
+
+/* 이미지가 아래에서 위로 슬라이드되면서 나타나는 애니메이션 */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+/* 새로 나타나는 이미지의 애니메이션 */
+@keyframes slideUpIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-container2 img {
+    display: none; /* 모든 이미지를 처음엔 숨김 */
+    position: relative;
+    animation-duration: 3s; /* 애니메이션 지속 시간 조절 */
+    animation-fill-mode: forwards;
+}
+
+/* 나타나는 이미지 */
+img.slide-up-in {
+    display: block;
+    animation-name: slideUpIn;
+}
+
+/* 사라지는 이미지 */
+img.slide-up-out {
+    display: block;
+    animation-name: slideUp;
+}
+/* 버튼 기본 스타일 */
+.test-buttons button, .intro-button, #quiz-container button, .show-result-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #00548c; /* 기본 배경색 */
+    color: #fff; /* 기본 글자 색 */
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease, color 0.1s ease; /* 트랜지션 효과 추가 */
+}
+
+/* 버튼이 눌렸을 때 효과 */
+.test-buttons button:active, .intro-button:active, #quiz-container button:active, .show-result-button:active {
+    transform: scale(0.95); /* 버튼이 살짝 들어가는 효과 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 살짝 눌린 듯한 그림자 효과 */
+    background-color: #ff4500; /* 극적인 변화를 위해 밝은 빨간색으로 변경 */
+    color: #ffffff; /* 눌렸을 때 글자 색을 순수한 흰색으로 변경 */
+}
+
+
+
+/* 테스트 결과 보기 페이지의 정확한 중앙 정렬 스타일 */
+#result-button-container {
+    display: none; /* 초기에는 숨김 */
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    position: relative; /* 중앙 정렬을 유지하기 위해 */
+}
