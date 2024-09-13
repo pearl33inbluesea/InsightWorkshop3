@@ -130,3 +130,70 @@ body {
 .stored-text span {
     margin: 0 2px;
 }
+
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#text {
+    font-size: 48px;
+    color: white;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.black-han-sans-regular {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#text span {
+    margin: 0 2px;
+}
+
+#inputText {
+    font-size: 24px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+#submitButton {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitButton:hover {
+    background-color: #e64a19;
+}
+
+/* 저장된 텍스트들의 스타일 */
+.stored-text {
+    position: absolute;
+    font-size: 36px; /* 기본 폰트 크기 */
+    color: white;
+    display: flex;
+}
+
+.stored-text span {
+    margin: 0 2px;
+}
