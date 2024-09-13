@@ -42,6 +42,10 @@ function addStoredText(text) {
     storedTextElement.style.left = `${x}px`;
     storedTextElement.style.top = `${y}px`;
 
+    // 랜덤 폰트 크기 설정
+    const fontSize = Math.floor(Math.random() * 50) + 20; // 20px ~ 70px 사이의 크기
+    storedTextElement.style.fontSize = `${fontSize}px`;
+
     // 텍스트 스팬 생성
     text.split('').forEach(char => {
         const span = document.createElement('span');
@@ -67,3 +71,4 @@ submitButton.addEventListener('click', () => {
 
 // 색상 변경 반복
 setInterval(changeColors, 500);
+
