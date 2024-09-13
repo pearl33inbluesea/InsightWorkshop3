@@ -1,0 +1,132 @@
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text {
+    font-size: 48px;
+    color: white;
+    display: flex;
+}
+
+#text span {
+    margin: 0 2px;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text {
+    font-size: 48px;
+    color: white;
+    display: flex;
+}
+
+.black-han-sans-regular {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#text span {
+    margin: 0 2px;
+}
+
+
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* 수직 정렬을 위해 추가 */
+    justify-content: center;
+    align-items: center;
+}
+
+#text {
+    font-size: 48px;
+    color: white;
+    display: flex;
+    margin-bottom: 20px; /* 입력 창과의 간격을 위해 추가 */
+}
+
+.black-han-sans-regular {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#text span {
+    margin: 0 2px;
+}
+
+#inputText {
+    font-size: 24px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; /* 스크롤바가 생기지 않도록 */
+    position: relative; /* 랜덤 위치를 잡기 위해 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#text {
+    font-size: 48px;
+    color: white;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.black-han-sans-regular {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#text span {
+    margin: 0 2px;
+}
+
+#inputText {
+    font-size: 24px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+#submitButton {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+/* 저장된 텍스트들의 스타일 */
+.stored-text {
+    position: absolute;
+    font-size: 36px;
+    color: white;
+    display: flex;
+}
+
+.stored-text span {
+    margin: 0 2px;
+}
